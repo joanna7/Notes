@@ -1,0 +1,27 @@
+CSS:The Definitive Guide
+CSS权威指南
+
+第1章 CSS和文档
+	1.
+	h1{
+		color: maroon;
+		font: italic 2em Times,serif;
+		text-decoration: underline;
+		background: yellow;
+	}
+	2.每个元素生成一个box
+	3.元素的两种形式：替换和非替换
+		替换：img(图片) input(单选钮 复选框活文本是输入框)
+		非替换：由用户代理(浏览器)在元素本身生成的框中显示
+	4.元素两种基本类型：块级block-level  行内inline-level
+		block-level 生成一个元素框 在元素框之前和之后产生分隔符(特例：列表元素会额外生成一个标记符，如无序列表中的圆点，有序列表中的数字)
+		inline-level 在文本行内生成元素框，不会产生分隔符(a strong em)
+		注意：HTML和XHTML中 块级元素不能继承自行内元素(即不能嵌套在行内元素中)，但在CSS中，对于显示角色如何嵌套不存在任何限制
+			display例子
+			<p>this is a paragraph with <em>an inline element</em> within it.</p>
+			p{
+				display: inline;
+			}
+			em{
+				display: block;
+			}
