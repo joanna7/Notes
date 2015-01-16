@@ -25,3 +25,8 @@ CSS权威指南
 			em{
 				display: block;
 			}
+                        em可以继承p，但是反过来不行。行内元素可以继承块元素，块元素不可以继承行内元素
+			XHTML中不合法的结构：<em><p>this is a paragraph improperly enclosed by an inline element.</p></em>
+	5.Link标记
+		<link rel="stylesheet" type="text/css" href="sheet1.css" media="all"/>
+		<link rel="stylesheet" type="taxt/css" href=""
