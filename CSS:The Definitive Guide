@@ -29,4 +29,9 @@ CSS权威指南
 			XHTML中不合法的结构：<em><p>this is a paragraph improperly enclosed by an inline element.</p></em>
 	5.Link标记
 		<link rel="stylesheet" type="text/css" href="sheet1.css" media="all"/>
-		<link rel="stylesheet" type="taxt/css" href=""
+		<link rel="stylesheet" type="taxt/css" href="visual-sheet.css" media="screen,projection"/>
+		media类型：常用三种：all screen print
+		           非常用：aural语音合成 braille embossed handheld手持设备 projection投影设备 tty固定间距设备 tv
+		链接到两个CSS样式表,合并它们的样式表，全部应用到文档：
+		<link rel="stylesheet" type="text/css" href="basic.css"/>
+		<link rel="stylesheet" type="text/css" href="splash.css"/>
