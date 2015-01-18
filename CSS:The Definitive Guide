@@ -35,3 +35,76 @@ CSS权威指南
 		链接到两个CSS样式表,合并它们的样式表，全部应用到文档：
 		<link rel="stylesheet" type="text/css" href="basic.css"/>
 		<link rel="stylesheet" type="text/css" href="splash.css"/>
+		例子：<link rel="stylesheet" type="text/css" href="basic.css"/>
+		<link rel="stylesheet" type="text/css" href="splash.css"/>
+		<p class="al">this paragraph will be gray only if styles from the stylesheet 'basic.css' are applied.</p>
+		<p class="bl">this paragraph will be gray only if styles from the stylesheet 'splash.css' are applied.</p>
+		此处没有link的title属性
+	6.候选样式表
+		(1)alternate style sheet
+			rel 属性改为alternate stylesheet,link元素的title属性产生一个候选样式列表
+			<link rel="stylesheet" type="text/css" href="sheet1.css" title="Default"/>
+			<link rel="alternate stylesheet" type="text/css" href="bigtext.css" title=" Big Text"/>
+			<link rel="alternate stylesheet" type="text/css" href="zany.css" title="Crazy colors!"/>
+			可以在浏览器中根据title切换样式表
+		(2)title和media的组合
+			<link rel="stylesheet" type="text/css" href="sheet1.css" title="Default" media="screen"/>
+			<link rel="stylesheet" type="text/css" href="print-sheet1.css" title="Default" media="print"/>
+			<link rel="alternate stylesheet" type="text/css" href="bigtext.css" title="Big Text" media="screen"/>
+			<link rel="alternate stylesheet" type="text/css" href="print-bigtext.css" title="Big Text" media="print"/>
+			首选样式表 永久样式表（没有为样式表指定title）
+	7.style元素
+		<style type="text/css" media="all"></style> 
+		被称为文档样式表document style sheet，或者嵌套样式表embedded style sheet
+		(1)@import指令
+			@import url(sheet2.css) @import出现在style容器里必须放在其他CSS规则之前，否则没有作用。
+			<style type="text/css">@import url(styles.css)
+			h1{color: gray;}
+			</style>
+			所有规则都会显示：
+				@import url(sheet2.css);
+				@import url(blueworld.css);
+				@import url(zany.css);
+			媒体：
+				@import url(sheet2.css) all;
+				@import url(blueworld.css) screen;
+				@import url(zany.css) projection,print;
+			一个外部样式表要引用其他外部样式表时只能用@import，不可以用link
+			@import url(http://example.org/library/layout.css);
+			@import url(basic-text.css);
+			@import url(printer.css) print;
+			body {color:red;}
+			h1 {color:blue;}
+			如果@import出现在其他规则之后，兼容代理就会将其忽略
+		(2)向后可访问性
+			浏览器可能无法识别<style></style>,但可识别声明：<!--和-->
+			做如此操作则会同时忽略style和声明：
+			<style type="text/css">
+			<!--@import url(sheet2.css);
+			h1{color:maroon;}
+			body{background:yellow;}
+			-->
+			</style>
+		(3)CSS注释
+			/*this is a css1 comment*/
+			可以跨多行，不可以嵌套
+	8.内联样式
+		inline style
+		<p style="color:gray;">The most wonderful of all breakfast foods is the waffle...</p>
+		除了在body外部出现的标记，style属性可以与任何其他HTML相关联
+		内联样式表只能放一个声明块，不能放样式表，不可以放@import,
+
+第2章 选择器
+
+
+附录：本书中需要区别对待的IE浏览器部分
+1
+2.IE不会忽略@import的任何指令
+
+
+
+
+
+
+		
+
