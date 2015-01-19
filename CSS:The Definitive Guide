@@ -95,6 +95,37 @@ CSS权威指南
 		内联样式表只能放一个声明块，不能放样式表，不可以放@import,
 
 第2章 选择器
+	1.基本规则
+		<h2><font color="gray">this is h2 text</font></h2>
+		h2{
+			color: gray;
+		}
+		h2{
+			color: silver;
+		}
+		每个规则都是：选择器和声明块组成。声明由属性和值组成。
+		h1{
+			color: red;
+			background: yellow;
+		}
+		值：要么是一个关键字，要么是可选关键字的一个列表，关键字之间用空格分隔
+		brain-size: 2cm; /*unknown property*/
+		color: ultraviolet; /*unknown value*/
+		p{
+			font: medium Helvetica;
+		} 
+		用/区分关键字的特例：h2{font: large/150% sans-serif;}		
+	2.元素选择器
+		XML中：什么都可以是选择器 QUOTE{color: gray;}
+								  BIB{color: red;}
+								  BOOKTITLE{color: purple;}
+								  MYElement{color: red;}
+		HTML中：选择器是HTML元素  html{color: red;}
+								  h1{color: black;}
+								  h2{color: silver;}
+	3.分组
+		(1)选择器分组
+		 h2,p{color: gray;}
 
 
 附录：本书中需要区别对待的IE浏览器部分
