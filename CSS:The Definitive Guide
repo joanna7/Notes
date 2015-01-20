@@ -25,7 +25,7 @@ CSS权威指南
 			em{
 				display: block;
 			}
-                        em可以继承p，但是反过来不行。行内元素可以继承块元素，块元素不可以继承行内元素
+			em可以继承p，但是反过来不行。行内元素可以继承块元素，块元素不可以继承行内元素
 			XHTML中不合法的结构：<em><p>this is a paragraph improperly enclosed by an inline element.</p></em>
 	5.Link标记
 		<link rel="stylesheet" type="text/css" href="sheet1.css" media="all"/>
@@ -36,10 +36,10 @@ CSS权威指南
 		<link rel="stylesheet" type="text/css" href="basic.css"/>
 		<link rel="stylesheet" type="text/css" href="splash.css"/>
 		例子：<link rel="stylesheet" type="text/css" href="basic.css"/>
-		<link rel="stylesheet" type="text/css" href="splash.css"/>
-		<p class="al">this paragraph will be gray only if styles from the stylesheet 'basic.css' are applied.</p>
-		<p class="bl">this paragraph will be gray only if styles from the stylesheet 'splash.css' are applied.</p>
-		此处没有link的title属性
+			  <link rel="stylesheet" type="text/css" href="splash.css"/>
+			  <p class="al">this paragraph will be gray only if styles from the stylesheet 'basic.css' are applied.</p>
+			  <p class="bl">this paragraph will be gray only if styles from the stylesheet 'splash.css' are applied.</p>
+			  此处没有link的title属性
 	6.候选样式表
 		(1)alternate style sheet
 			rel 属性改为alternate stylesheet,link元素的title属性产生一个候选样式列表
@@ -93,7 +93,6 @@ CSS权威指南
 		<p style="color:gray;">The most wonderful of all breakfast foods is the waffle...</p>
 		除了在body外部出现的标记，style属性可以与任何其他HTML相关联
 		内联样式表只能放一个声明块，不能放样式表，不可以放@import,
-
 第2章 选择器
 	1.基本规则
 		<h2><font color="gray">this is h2 text</font></h2>
@@ -127,6 +126,47 @@ CSS权威指南
 		(1)选择器分组
 		 h2,p{color: gray;} 规则中两个不同的选择器要用逗号
 		 body,table,th,td,h1,h2,h3,h4,p,pre,strong,em,b,i,{color: gray;}
+		 /* group 1*/
+		 h1{color: silver; background: white;}
+		 h2{color: silver; background: gray;}
+		 h3{color: white; background: gray}
+		 h4{color: silver; background: white;}
+		 b{color: gray; background: white;}
+		 /* group 2*/
+		 h1,h2,h4{color: silver;}
+         h3{color: white;}
+		 b{color: gray;}
+		 h1,h4,b{background: white;}
+		 h2,h3{background: gray;}
+		 /* group 3*/
+		 h1,h4{color: silver; background: white;}
+		 h2,h3{background: gray;}
+		 h2{color: silver;}
+		 h3{color: white;}
+		 b{color: gray; background: white;}
+		(2)通配器选择
+		 *{color: red;}
+		(3)声明分组
+		 h1{
+		 	font: 18px Helvetica;
+		 	color: purple;
+		 	background: aqua;
+		 }
+		(4)组合选择器和声明的分组
+		 h1,h2,h3,h4,h5,h6{
+		 	color: gray;
+		 	background: white;
+		 	padding: 0.5em;
+		 	border: 1px solid black;
+		 	font-family: Charcoal,sans-serif;
+		 	}
+ 	4.类选择器和ID选择器
+ 	
+
+
+
+
+
 
 
 附录：本书中需要区别对待的IE浏览器部分
