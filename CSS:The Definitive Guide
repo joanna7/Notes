@@ -125,7 +125,8 @@ CSS权威指南
 								  h2{color: silver;}
 	3.分组
 		(1)选择器分组
-		 h2,p{color: gray;}
+		 h2,p{color: gray;} 规则中两个不同的选择器要用逗号
+		 body,table,th,td,h1,h2,h3,h4,p,pre,strong,em,b,i,{color: gray;}
 
 
 附录：本书中需要区别对待的IE浏览器部分
