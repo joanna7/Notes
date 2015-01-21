@@ -240,6 +240,42 @@ CSS权威指南
  		 如果图片名为figure-1.gif,figure-2.gif,则
  		 img[src|="figure"]{border: 1px solid gray;}
  	6.使用文档结构
+ 		(1)父子关系
+ 		(2)后代选择器/包含选择器/上下文选择器
+ 		 h1 em{color: gray;} 空格是结合符 作为h1元素后代的任何em元素
+ 		 ul ol ul em{color: gray;}
+ 		 空格两边都是元素 区别于p.warning{color: gray;}warning是值
+ 		 td.sidebar{background: blue;}
+ 		 td.main{background: white;}
+ 		 td.sidebar a:link{color: white;}
+ 		 td.main a:link{color: blue;}
+ 		 blockquote b,p b{color:gray;}
+ 		 特点：ul em{color: gray;} 从所有的ul元素中继承em元素 不管em元素嵌套多深
+ 		(3)子元素
+ 		 > 子结合符
+ 		 <h1>this is<strong>very</strong>important</h1>
+ 		 <h1>this is<em>really<strong>very</strong><em>important.</h1>
+ 		 h1>strong 子结合符两边可以有空格 h1 > strong
+ 		 table.summary td>p  
+ 		(4)兄弟元素
+ 		 + 相邻兄弟结合符 两边可以有空格
+ 		 h1 + p{margin-top: 0;}设置紧接在h1元素后的p元素 并且h1和p有共同的父元素
+ 		 <div>
+ 		 	<ol>
+ 		  		<li></li>
+ 		  		<li></li>
+ 		  		<li></li>
+ 		 	</ol>
+ 		 	<ul>
+ 		 		<li></li>
+ 		  		<li></li>
+ 		  		<li></li>
+ 		 	</ul>
+ 		 </div>
+ 		 li + li{font-weight: bold;} 指ol和ul中的第二个和第三个li
+ 		 html > body table + ul{margin-top:1.5em}
+ 	7.伪类和伪元素
+ 		(1)
 
 
 
