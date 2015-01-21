@@ -275,7 +275,15 @@ CSS权威指南
  		 li + li{font-weight: bold;} 指ol和ul中的第二个和第三个li
  		 html > body table + ul{margin-top:1.5em}
  	7.伪类和伪元素
- 		(1)
+ 		(1)伪类选择器
+ 		 a:visited{color: red;}
+ 		(2)链接伪类
+ 		 :link 未访问
+ 		 :visited 已访问
+ 		 a{color: blue;}
+ 		 a:visited{color: red;}
+ 		 a:link{color: blue;}
+ 		 a:visited{color: red;}
 
 
 
