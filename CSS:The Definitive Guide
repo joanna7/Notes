@@ -196,6 +196,54 @@ CSS权威指南
  		 <h1 class="hoopla">hello</h1>
  		 <h1 class="severe">severe</h1>
  		 <h1 class="fancy">fancy</h1>
+ 		 所有moons属性的所有planet元素
+ 		 planet[moons]{font-weight: bold;}
+ 		 img[alt]{border: 3px solid red;}
+ 		 *[title]{font-weight: bold;}
+ 		 a[href][title]{font-weight: bold;}同时将有href和title属性的HTML超链接文本设置为粗体
+ 		 <a href="http://www.w3.org/" title="w3c home">w3c</a>
+ 		(2)根据具体属性值选择
+ 		 planet[moons="1"]{font-weight: bold;}
+ 		 <planet>venus</planet>
+ 		 <planet moons="1"></planet>
+ 		 a[href="http://www.w3.org/"][title="w3c home"]{font-size" 200%;}
+ 		 特例：值本身就有一个空格
+ 		 <planet type="barren rocky">mercury</planet>
+ 		 唯一表达方式 planet[type="barren rocky"]{font-weight: bold;}
+ 		 完全串匹配：<p class="urgent warning">when the</p>
+ 		            p[class="urgent warning"]{font-weight: bold;}urgent在前，warning在后，有一个空格
+ 		(3)根据部分属性值选择
+ 		 <p class="urgent warning">when the</p>
+ 		 class属性中包含warning
+ 		 p[class~=:"warning"]{font-weight: bold;}
+ 		 ~=包含，不仅仅是用于class，可以用于任何属性
+ 		 p.warning和p[class~="warning"]应用到HTML中是等价的
+ 		 img[title~="Figure"]border{1px solid gray;}
+                 子串匹配属性选择器：也可用于IE7
+ 		 <span class="barren rocky">mercury</span>
+ 		 <span class="cloudy barren">venus</span>
+ 		 <span class="life-bearing cloudy">earth</span>
+ 		 span[class*="cloud"]{font-style: italic;}
+ 		 span[class^="bar"]{background: silver;}
+ 		 span[class$="y"]{font-weight: bold;}
+ 		 a[href*="oreilly"]{font-weight: bold;}
+ 		 img[src*"space"]{border: 5px solid red;}
+ 		(4)特定属性选择类型
+ 		 *[lang|="en"]{color: white;}
+ 		 lang属性等于en或者以en-开头的所有元素
+ 		 包括：<h1 lang="en">hello!</h1>
+ 		 	   <p lang="en-us">greenting</p>
+ 		 	   <div lang="en-au">yeah</div>
+ 		 不包括：<p lang="fr">bonjure</p>
+ 		 		 <h4 lang="cy-en">jon</h4>
+ 		 一般[att|"val"]可以用于任何属性及其值
+ 		 如果图片名为figure-1.gif,figure-2.gif,则
+ 		 img[src|="figure"]{border: 1px solid gray;}
+ 	6.使用文档结构
+
+
+
+
 
 
 
