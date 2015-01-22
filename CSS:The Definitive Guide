@@ -274,7 +274,7 @@ CSS权威指南
  		 </div>
  		 li + li{font-weight: bold;} 指ol和ul中的第二个和第三个li
  		 html > body table + ul{margin-top:1.5em}
- 	7.伪类和伪元素
+	7.伪类和伪元素
  		(1)伪类选择器
  		 a:visited{color: red;}
  		(2)链接伪类
@@ -284,6 +284,21 @@ CSS权威指南
  		 a:visited{color: red;}
  		 a:link{color: blue;}
  		 a:visited{color: red;}
+ 		 未访问是紫色，访问过的是银色，在HTML3.2中定义：
+ 		 	<body link="purple" vlink="silver"></body>
+ 		 在CSS中定义：
+ 		 	a:link{color: purple;}
+ 		 	a:visited{color: silver;}
+ 		 	a:visited{color: silver;text-decoration: line-through;font-style: italic;}
+ 		 <a href="http://www.baidu.com/">baidu</a>
+ 		 <a href="http://www.google.com" class="external">google</a>
+ 		 a.external:link,a.external:visited{color: maroon;}
+ 		 ID选择器：
+ 		 	a#footer-copyright:link{font-weight: bold;}
+ 		 	a#footer-copyright:visited{font-weight: normal;}
+ 		(3)动态伪类
+
+
 
 
 
