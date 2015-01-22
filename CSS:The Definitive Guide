@@ -297,7 +297,17 @@ CSS权威指南
  		 	a#footer-copyright:link{font-weight: bold;}
  		 	a#footer-copyright:visited{font-weight: normal;}
  		(3)动态伪类
-
+ 			可以应用到任何元素
+ 			:focus
+ 			:hover
+ 			:active
+ 			顺序：link visited focus hover active
+ 			input:focus{background: silver;font-weight: bold;}
+ 			body *:hover{background: yellow;}
+ 		(4)动态样式的实际问题
+ 			a:link,a:visited{font-size: 13px;}
+ 			a:hover{font-size: 20px;}
+ 			:first-child
 
 
 
