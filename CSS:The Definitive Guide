@@ -323,8 +323,15 @@ CSS权威指南
  		  a:link:visited:lang(de){color: silver;}
  		(5)伪元素选择器
  		 1"首字母样式
+ 		  p:first-letter{color: red;} 每一段的第一个字母设置为红色
+ 		  h2:first-letter{font-size: 200%;}
  		 2"第一行样式
+ 		  p:first-line{color: purple;}
+ 		  first-letter和first-line 只能用于块元素 不能用于行内元素
  		 3"之前和之后样式
+ 		  h2:before{content:"{}";color: silver;}
+ 		  body:after{content:"the end";color: silver;}
+ 		  插入都是incline元素
 
 
 
