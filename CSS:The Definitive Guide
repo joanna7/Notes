@@ -307,7 +307,26 @@ CSS权威指南
  		(4)动态样式的实际问题
  			a:link,a:visited{font-size: 13px;}
  			a:hover{font-size: 20px;}
- 			:first-child
+ 		 1"选择第一个子元素
+ 		 :first-child
+ 			p:first-child{font-weight: bold;} 作为某元素的第一个子元素的所有p元素
+ 			li:first-child{text-transform: uppercase;} 作为某元素的第一个子元素的所有li元素
+ 			em:first-child
+ 		 2"根据语言选择
+ 		  *lang(fr){font-style: italic;}
+ 		 3"结合伪类
+ 		  a:link:hover{color: red;}
+ 		  a:visited:hover{color: maroon;}
+ 		  a:hover:link{color: red;}
+ 		  a:hover:visited{color: maroon;}顺序不影响
+ 		  a:link:hover:lang(de){color: gray;}
+ 		  a:link:visited:lang(de){color: silver;}
+ 		(5)伪元素选择器
+ 		 1"首字母样式
+ 		 2"第一行样式
+ 		 3"之前和之后样式
+
+
 
 
 
