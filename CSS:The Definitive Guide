@@ -333,6 +333,31 @@ CSS权威指南
  		  body:after{content:"the end";color: silver;}
  		  插入都是incline元素
 
+第3章 结构和层叠
+	1.特殊性
+	 继承：一个元素向其后代元素传递属性值所采用的机制
+	 层叠：继承，声明的特殊性和来源
+	 0,0,0,0,
+	2.声明和特殊性
+	3.通配符选择器特殊性 0,0,0,0
+	 div p{color: black;} 0,0,0,2
+	 *{color: gray;} 0,0,0,0
+	4.ID和属性选择器的特殊性
+	 html>body table tr[id="totals"] td ul>li{color: maroon;}
+	 li#answer{color: navy;}
+	 #answer 0,1,0,0
+	 [id="totals"] 0,0,1,0
+	5.内联样式特殊性
+	 h1{color: red;} 0,0,0,1
+	 <h1 style="color: green;">the party</h1> 1,0,0,0
+	 内联属性级别最高
+	 h1#meadow{color: red;} 0,1,0,0
+	 <h1 id="meadow" style="color: green;">the party</h1> 1,0,0,0
+	6.重要性
+	 结束；之前插入 !important
+	 p.dark{color: #333 !important;background:white;}
+	 p.dark{color: #333 !important;background:white !important;}
+	 p.light{color: yellow;font: smaller Times,serif !important;}
 
 
 
