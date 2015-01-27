@@ -358,7 +358,52 @@ CSS权威指南
 	 p.dark{color: #333 !important;background:white;}
 	 p.dark{color: #333 !important;background:white !important;}
 	 p.light{color: yellow;font: smaller Times,serif !important;}
-
+	7.继承
+	 <h1>meerkat <em>central</em></h1>
+	 h1{color: gray;}
+	 ul{color: gray;}
+	 border不会继承
+	 0特殊性比无特殊性要强：
+	  *{color: gray;}
+	  h1#page-title{color: black;}
+	  *适用于所有元素，p显示为gray,继承的h1属性要弱于0特殊性。继承属性是吴特殊性。
+	  #toolbar{color: black;background: white;}
+	  #toolbar a:link{color: black;}
+	 8.层叠
+	  h1{color: red;}
+	  h1{color: blue;}
+	  (1)按权重和来源
+	   p{color: gray !important;}
+	   <p style="color: black;">well,<em>hello</em>there!</p>
+	   p em{color: black;} /*author's style sheet*/
+	   p em{color: yellow;} /*reader's style sheet*/
+	   显示为black
+	   p em{color: black !important;} /*author's style sheet*/
+	   p em{color: yellow !important;} /*reader's style sheet*/
+	   显示为yellow
+	  (2)特殊性排序
+	   0,0,0,0
+	  (3)顺序排序
+	   显示较后的：h1{color: red;}
+	   			   h1{color: blue;}
+	   包含的规则胜出：
+	    p em{color: purple;} /*from imported style sheet*/
+	    p em{color: gray;} /*rule contained within the document*/
+	    :link{color: blue;}
+	    :visited{color: purple;}
+	    :hover{color: red;}
+	    :active{color: orange;}
+	    love-ha
+	    顺序无影响： 
+	     :link{color: blue;}
+	     :visited{color: purple;}
+	     :link:hover{color: red;}
+	     :visited:hover{color: gray;}
+	     :link:active{color: orange;}
+	     :visited:active{color: silver;}
+	     :link:hover:active{color: orange;}
+	     :visited:hover:active{color: silver;}
+	    
 
 
 
