@@ -403,7 +403,35 @@ CSS权威指南
 	     :visited:active{color: silver;}
 	     :link:hover:active{color: orange;}
 	     :visited:hover:active{color: silver;}
-	    
+第4章 值和单位
+	1.数字
+	2.百分数
+	3.颜色
+	 (1)命名颜色
+	 (2)RGB
+	  函数式RGB
+	   rgb(100%,100%,100%)
+	   rgb(0%,0%,0%)
+	   rgb(255,255,255)
+	   rgb(0,0,0)
+	   h1{color: rgb(255,255,255);}
+	   h2{color: rgb(25%,0%,100%);}
+	   0%~100%
+	   0~255
+	  十六进制RGB
+	   h1{color: #ffffff;}
+	   h1{color: #903bc0;}
+	   h3{color: #000000;}
+	   h4{color: #808080;}
+	   #RRGGBB 红绿蓝
+	   h1{color: #000;}
+	   h2{color: #666;}
+	   h3{color: #fff;}
+	   #RGB
+	  Web安全颜色
+	   百分数:能被20整除的数(0%,0%,0%) (20%,40%,60%) (40%,80%,100%)
+	   255:能被51整除 (0,204,153) (255,0,102)
+	   十六进制:00,33,66,99,CC,FF 	    
 
 
 
