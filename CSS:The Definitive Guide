@@ -479,7 +479,110 @@ CSS权威指南
 	 (3)频率值
 	  Hz MHz Mhz
 	 URI(identifier) URL
-
+第5章 字体
+	1.通用字体系列
+	 Serif：非等宽 上下短线Times,Georgia,New Century Schoolbook
+	 Sans-serif:非等宽 Helvetica,Geneva,Verdana,Arial,Univers
+	 Monospace:等宽 Courier,Courier New,Andale Mono
+	 Cursive:手写体 Zapf Chancery,Author,Comics Sans
+	 Fantasy:Western,Woodblock,Klingon
+	2.使用
+	 body{font-family: sans-serif;}
+	 body{font-family: serif;}
+	 h1,h2,h3,h4{font-family: sana-serif;}
+	 code,pre,tt,span.input{font-family: monospace;}
+	 p.signature{font-family: cursive;}
+	3.指定字体系列
+	 h1{font-family: Georgia;}
+	 h1{font-family: Georgia,serif;}
+	 p{font-family: Times,TimesNR,'New Century Schoolbook',Georgia,'New York',serif;}
+	  使用引号：# $ % 空格 字体名
+	4.字体加粗
+	 b{font-weight: bold;}
+	  9级加粗度：normal 400
+	 p.one{font-weight: bold;}
+	 lighter light normal bold bolder 相对值
+	5.字体大小
+	 font-size
+	 p.one{font-size: xx-small;}
+	 p.two{font-size: x-small;}
+	 p.three{font-size: small;}
+	 p.four{font-size: medium;}
+	 p.five{font-size: large;}
+	 p.six{font-size: x-large;}
+	 p.seven{font-size: xx-large;}
+	 百分数：相对于父元素的大小
+	6.字体风格
+	 font-style
+	 italic 单独字体风格
+	 oblique 字体倾斜过来
+	 p{font-style: normal;}
+	 em,i{font-style: italic;}
+	 p{font-style: normal;}
+	 em{font-style: oblique;}
+	 i{font-style: italic;}
+	 blockquote{font-style: italic;}
+	 blockquote em,blockquote i{font-style: normal;}
+	7.字体变形
+	 非继承值
+	 p{font-variant: small-caps;} 大写字母，更大的大写字母。小写字母，小的大写字母。
+	 p{font-variant: normal;}
+	8.拉伸和调整
+	 strong{font-stretch: wider;}
+	 font-size-adjust
+	9.font属性
+	 (1)font-family
+	 font-weight
+	 font-size
+	 font-variant
+	 font-style
+	 h1{
+	 	font-family: Verdana,Helvetica,Arial,sans-serif;
+	 	font-size: 30px;
+	 	font-weight: 900;
+	 	font-style: italic;
+	 	font-variant: small-caps;
+	 }
+	 h2{
+	 	font-family: Verdana,Helvetica,Arial,sans-serif;
+	 	font-size: 24px;
+	 	font-weight: bold;
+	 	font-style: italic;
+	 	font-variant: normal;
+	 }
+	 h1{
+	 	font: italic 900 small-caps 30px Verdana,Helvetica,Arial,sans-serif;
+	 }
+	 h2{
+	 	font: bold normal italic 24px Verdana,Helvetica,Arial,sans-serif;
+	 }
+	 (2)font属性顺序：
+	 任意排序+严格排序
+	 任意排序：font-style font-variant font-weight
+	 严格排序：font-size在前 font-family在后
+	 (3)增加行高
+	  line-height 作为font-size的补充值
+	  h2{
+	  	font: 200%/1.2
+	  }
+	  必须要有的值：font-size font-family
+第6章 文本属性
+	1.缩进
+	 text-indent 对块级元素的第一行进行缩进
+	 p{text-indent: 3em;}
+	 p{text-indent: -4em;padding-left: 4em;}
+	 div{width: 400px;}
+	 p{text-indent: 10%;}
+	 text-indent有继承属性
+	 div#outer{width: 500px;}
+	 div#inner{text-indent: 10%;}
+	 p{width: 200px;}	 
+	2.水平对齐
+	 text-align
+	 应用于块级元素 影响元素中的文字
+	 <center></center>把整个块元素左移或者右移	 
+	 p{text-align: left;}
+	 p{text-align: justify;}两端对齐
 
 
 
