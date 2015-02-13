@@ -583,7 +583,27 @@ CSS权威指南
 	 <center></center>把整个块元素左移或者右移	 
 	 p{text-align: left;}
 	 p{text-align: justify;}两端对齐
-
+	3.垂直对齐
+	 line-height
+	 继承
+	 	body{font-size: 10px;}
+	 	div{line-height: 1em;}
+	 	p{font-size: 18px;}
+	 缩放因子
+	 	div{line-height: 1.5;}
+	 	p{font-size: 18px;}
+	 	此时行高是18px*1.5
+	 垂直对齐文本
+	  vertical-align
+	  img{vertical-align: baseline;}
+	  span.raise{vertical-align: sub;}
+	  span.lower{vertical-align: super;}
+	  .feeder{vertical-align: bottom;}
+	  vertical-align: top;
+	  vertical-align: text-top;
+	  vertical-align: bottom;
+	  vertical-align: text-bottom;
+	  vertical-align: 50%;
 
 
 
