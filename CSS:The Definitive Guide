@@ -604,7 +604,30 @@ CSS权威指南
 	  vertical-align: bottom;
 	  vertical-align: text-bottom;
 	  vertical-align: 50%;
-
+	4.字间隔和字母间隔
+	 (1)字间隔 word-spacing
+	  p.spread{word-spacing: 0.5em;}
+	  p.tight{word-spacing: -0.5em;}
+	  p.base{word-spacing: normal;}
+	  p.norm{word-spacing: 0;}
+	 (2)字母间隔 
+	  p{letter-spacing: 0;}
+	  p.spacies{letter-spacing: 0.25em;}
+	  p.tight{letter-spacing: -0.25em;}
+	  strong{letter-spacing: 0.2em;}
+	 (3)间隔和对齐
+	  p{font-size: 20px;letter-spacing: 0.25em;}
+	  small{font-size: 50%;letter-spacing: 0.25em;}
+	5.文本转换
+	 text-transform
+	  h1{text-transform: uppercase;}
+	  strong{text-transform: lowercase;}
+	  p.cummings{text-transform: capitalize;}
+	6.文本装饰
+	 text-decoration
+	  p.emph{text-decoration: underline;}
+	  p{text-decoration: overline;}
+	  p{text-decoration: line-through;}
 
 
 
